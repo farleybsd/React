@@ -1,0 +1,7 @@
+# Instalando Vite (Gerar Bungles e Compite)
+npm create vite@latest     -- 2.9.8
+
+# Subindo a aplicacao
+cd  aplicacao 
+  npm install   
+  npm run dev 
