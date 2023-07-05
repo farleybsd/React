@@ -1,25 +1,30 @@
-import { Post } from './components/Post';
-import { Header } from './components/Hearder';
-import { Sidebar } from './components/Sidebar';
+import { useState } from 'react';
+import { Header } from './components/Header';
+import { Post,PostType } from './components/Post';
+import styles from './App.module.css';
+import { SideBar } from './components/SideBar';
 
-import styles from './App.modules.css';
-import './global.css';
 
-const posts = [
+// author: { avatar_url: "", name: "", role: "" }
+// publishedAt: Date
+// content: String,
+
+const posts : PostType[] = [
   {
     id: 1,
     author: {
       avatarUrl: 'https://github.com/farleybsd.png',
-      name: "Farley",
-      role: "Instrutor na Rocketseat"
+      name: "Pedro Miguel",
+      role: "Desenvolvedor Frontend"
     },
     content: [
       { type: 'paragraph', content: 'Fala galeraa 👋' },
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
       { type: 'link', content: 'jane.design/doctorcare' },
     ],
-    publishedAt: new Date('2022-06-15 20:44:00'),
+    publishedAt: new Date('2022-06-13 20:42:00'),
   },
+
   {
     id: 2,
     author: {
@@ -36,27 +41,24 @@ const posts = [
   },
 ]
 
+// iteração
 
-export function App() {
+function App() {
+
   return (
-    <div>
-      <Header />
+    <>
+      <Header></Header>
       <div className={styles.wrapper}>
-        <Sidebar />
+        <SideBar />
         <main>
-          {posts.map(post => {
-            return (
-              <Post
-              key={post.id}
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
-              />
-            )
-          })}
+          {posts.map(post => <Post
+            key={post.id}
+            post={post}
+          />)}
         </main>
       </div>
-    </div>
+    </>
   )
 }
 
+export default App
