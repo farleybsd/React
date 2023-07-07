@@ -1,0 +1,23 @@
+# Instalacao styled-components
+npm install styled-components
+npm install @types/styled-components -D
+
+# Instalacao Eslint
+npm install eslint -D
+
+
+# Instalacao Eslint Rocket
+npm install @rocketseat/eslint-config -D
+
+# Rodando  Eslint
+npx eslint src --ext .ts,.tsx
+
+# Corrigindo o codigo com   Eslint
+npx eslint src --ext .ts,.tsx --fix
+
+# Rodando o codigo com   Eslint pelo package.json
+npm run lint
+# Rotas
+npm install react-router-dom
+# Instalando Icone
+npm install phosphor-react
