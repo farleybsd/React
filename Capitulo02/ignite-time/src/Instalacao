@@ -21,3 +21,9 @@ npm run lint
 npm install react-router-dom
 # Instalando Icone
 npm install phosphor-react
+# Instalando React-Hook-Form
+npm install react-hook-form
+# Validacoes Form
+ npm install zod
+# Integrando zod ao  react-hook-form
+npm install @hookform/resolvers
