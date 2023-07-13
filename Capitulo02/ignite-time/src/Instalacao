@@ -27,3 +27,5 @@ npm install react-hook-form
  npm install zod
 # Integrando zod ao  react-hook-form
 npm install @hookform/resolvers
+# Trabalhando com Data
+npm install date-fns

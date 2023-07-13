@@ -1,19 +1,22 @@
 import { Button } from "./components/Button";
 
-import {ThemeProvider} from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
 import { Router } from "./Router";
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { CyclesContextProvider } from "./context/CyclesContext";
 
 export function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-      <Router/>
+        <CyclesContextProvider>
+          <Router />
+        </CyclesContextProvider>
       </BrowserRouter>
-      
+
       {
       /* 
       <Button variant="primary"/>
@@ -23,7 +26,7 @@ export function App() {
       <Button/> 
       */}
 
-      <GlobalStyle/>
+      <GlobalStyle />
     </ThemeProvider>
   )
 }
